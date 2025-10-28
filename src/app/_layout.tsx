@@ -1,7 +1,11 @@
-import {Slot,Stack} from 'expo-router'
+import {Slot} from 'expo-router'
+import {DarkTheme,ThemeProvider} from '@react-navigation/native'
+
 export default function RootLayout() {
   return (
-    //this funtionas a main layout it is a global layout
-    <Slot/>
+    <ThemeProvider value={DarkTheme}>
+      <Slot/>
+    </ThemeProvider>
   )
+  
 }
